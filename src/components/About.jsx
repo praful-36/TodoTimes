@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className="about-container w-80 md:w-1/2 mx-7 sm:mx-auto my-4 p-6 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-lg shadow-md">
+    <div className="about-container w-80 md:w-1/2 mx-auto sm:mx-auto my-4 p-6 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-lg shadow-md">
       <h1 className="about-header text-3xl font-bold mb-4">About To-Do List App</h1>
       <p className="about-paragraph mb-4">
         Welcome to our To-Do List App! This application is designed to help you manage your tasks efficiently. Whether you need to keep track of daily chores or important projects, our app has got you covered.

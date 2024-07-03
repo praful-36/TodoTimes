@@ -109,7 +109,7 @@ const Home = () => {
   };
 
   return (
-    <div className="container w-80 mx-7 sm:mx-auto my-10 px-5 py-5 bg-gray-200 rounded-xl md:w-1/2 sm:w-full" style={{ boxShadow: "6px 6px 13px white inset, 5px 5px 12px #101010" }}>
+    <div className="container w-80 mx-auto sm:mx-auto my-10 px-5 py-5 bg-gray-200 rounded-xl md:w-1/2 sm:w-full" style={{ boxShadow: "6px 6px 13px white inset, 5px 5px 12px #101010" }}>
       <AddTodo todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
       <FilterControls filter={filter} setFilter={setFilter} sortByPriority={sortByPriority} setSortByPriority={setSortByPriority} searchQuery={searchQuery} setSearchQuery={setSearchQuery} clearSearch={clearSearch} handleClearCompleted={handleClearCompleted} />
       <TodoList todos={filteredTodos} handleEdit={handleEdit} handleDelete={handleDelete} handleToggleComplete={handleToggleComplete} />
