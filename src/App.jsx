@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="/TodoTimes">
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Routes>
           <Route path="/" element={<Home />} />
