@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react';
-import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './App.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
+import NotFound from './components/NotFound';
 
 function App() {
+
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+    setDarkMode((prevMode) => !prevMode);
   };
 
   useEffect(() => {
@@ -18,15 +20,17 @@ function App() {
     } else {
       document.body.classList.remove('dark');
     }
+    localStorage.setItem('darkMode', JSON.stringify(darkMode));
   }, [darkMode]);
 
   return (
     <div className="App">
-      <BrowserRouter basename="/TodoTimes">
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Home darkMode={darkMode} />} />
+          <Route path="/about" element={<About darkMode={darkMode} />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,74 +1,74 @@
+/* ===================================================================== */
+/* Global Styles & Theme                                               */
+/* ===================================================================== */
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+  /* Black text */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Inter', Arial, sans-serif;
+  line-height: 1.5;
+}
+
 .dark {
   /* Dark mode styles */
   background-color: #1a202c;
   color: black;
 }
 
-body {
-  /* Light mode body styles */
-  background-color: #ffffff; /* White background */
-  color: #000000; /* Black text */
+*:focus {
+  outline: none;
 }
 
 
-/* box-shadow: -4px -4px 12px 5px #5c5c5c, 5px 5px 12px 5px #8d8d8d; */
+/* ===================================================================== */
+/* Modal & Animation Styles                                              */
+/* ===================================================================== */
 
-.about-container {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-  }
-  
-  .about-header {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  
-  .about-sub-header {
-    font-size: 1.5em;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .about-paragraph {
-    font-size: 1em;
-    line-height: 1.6;
-  }
-  
-  .about-list {
-    list-style-type: disc;
-    padding-left: 20px;
-  }
-  
-  .about-list-item {
-    margin-bottom: 10px;
-  }
-  
-
-  *:focus {
-    outline: none;
-}
-
-.Tag{
-  font-size: 13px;
-  font-weight: 600;
-  margin: 10px;
-  padding: 5px;
-  border-radius: 5px;
-  background: transparent;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, 
-  rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-   rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-}
-
-.filters-btn{
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, 
-  rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-   rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-}
-
-
-.Modal{
+.Modal {
   box-shadow: rgba(0, 0, 0, 0.56) -1px 4px 17px 4px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease;
+}
+
+/* ===================================================================== */
+/* FilterControls Component Styles                                       */
+/* ===================================================================== */
+
+.filters-btn {
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ===================================================================== */
+/* Box Shadow Helpers                                                    */
+/* ===================================================================== */
+
+.box-shadow {
+  box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+.shadow-white {
+  box-shadow: 1px 1px 8px 4px rgba(255, 255, 255, 0.915);
+}
+
+.shadow-black {
+  box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.5);
 }
